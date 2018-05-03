@@ -1,4 +1,4 @@
-Package: alexis19
+Package: alexis109
 Type: Package
 Title: Data from Experiment on Lag-click Lateralization and Detection
 Version: 0.1.0
@@ -6,10 +6,9 @@ Author: Mats E. Nilsson, mats.nilsson@spsychology.su.se
 Maintainer: The package maintainer <mats.nilsson@spsychology.su.se>
 Description: This package contains data from an experiment called ALEXIS 109. ALEXIS 
   stands for Auditory Learning and EXpertISe, and 109 is the number of a specific experiment,
-  the data of which is contained in this package. The experiment measured laterlaization
-  and detection thresholds of a 10 dB inter-aural-level differences in lagging part of lead-lag click pairs, for
-  various time-separations between the leading and lagging click. Details of the 
-  experimental design is given in separate vignettes.
+  the data of which is contained in this package. The experiment(s) measured lateralization
+  and detection thresholds of inter-aura differences in lagging part of lead-lag click pairs, for
+  various time-separations between the leading and lagging click.
 License: stands
 Encoding: UTF-8
 LazyData: true
