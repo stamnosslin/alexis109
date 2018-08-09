@@ -17,5 +17,7 @@ For each of these, there are one data file with processed data, i.e., estimated 
 + **ths_det**, thresholds for the detection experiment
 + **ths_rove**, thresholds for the roving experiment
 
+Threholds were estimated using Hamiltonian Monte Carlo, as described in the manuscript.
+
 Note that data files uses id number 2001, 2002, and 2003 for listener MS, CT and CS, respectively. ID-numbers 2005 and 2006 in the 
 data files of the additional experiment (with and without level roving) refer to listener EE and IO. 
