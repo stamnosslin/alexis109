@@ -25,9 +25,9 @@
 data109lat
 }
 \description{
-This is data from an experiment with three participants, tested on lateralization 
-of a large binaural difference in lag clicks following a lead click after 
-an inter-click interval between 0.125 to 256 ms. The binaural difference was 
+This is data from an experiment with three participants, tested on lateralization
+of a large binaural difference in lag clicks following a lead click after
+an inter-click interval between 0.125 to 256 ms. The binaural difference was
 an ITD of 0.35 ms or an ILD of 10 dB or both.
 }
 \keyword{datasets}

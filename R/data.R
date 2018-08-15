@@ -90,14 +90,14 @@
 #' an inter-click interval between 0.125 to 256 ms. The binaural difference was
 #' an ITD of 0.35 ms or an ILD of 10 dB or both.
 #'
-#' @format A data frame with 49,140 rows and 13 columns.
+#' @format A data frame with 117 rows and 11 columns.
 #' \describe{
 #'   \item{id}{Participant unique id number}
 #'   \item{ici}{Inter-click interval in ms, Note: -1 is for sessions with no lead click}
 #'   \item{bincond}{Binaural condition: 1 = ILD-only, 2 = ITD-only, 3 = ITD+ILD}
-#'   \item{thmode}{Threshold estimate (mode of posterior distribution), i.e., LLR [dB] at 75 % correct responses}
-#'   \item{X.0.95}{Lower 95 % credibility interval of posterior distribution of threshold}
-#'   \item{X0.95.}{Upper 95 % credibility interval of posterior distribution of threshold}
+#'   \item{thmode}{Threshold estimate (mode of posterior distribution), i.e., LLR [dB] at 75 percent correct responses}
+#'   \item{X.0.95}{Lower 0.95 credibility interval of posterior distribution of threshold}
+#'   \item{X0.95.}{Upper 0.95 credibility interval of posterior distribution of threshold}
 #'   \item{mmode}{Mode of location parameter m}
 #'   \item{wmode}{Mode of scale parameter w (spread)}
 #'   \item{lapsemode}{Mode of lapse-reate parameter lambda}
@@ -105,3 +105,50 @@
 #'   \item{maxrhat}{MCMC diagnostic: highest (worst) rhat (should be very close to 1.00)}
 #'   }
 "ths_lat"
+
+#' Processed data from experiment ALEXIS 109: Detection experiment
+#'
+#' This is processed data (estimated thresholds) from an experiment with three participants, tested on detection
+#' of a lag click following a lead click after
+#' an inter-click interval between 0.125 to 256 ms. The binaural difference of the lag click was
+#' an ITD of 0.35 ms or an ILD of 10 dB or both or none.
+#'
+#' @format A data frame with 144 rows and 11 columns.
+#' \describe{
+#'   \item{id}{Participant unique id number}
+#'   \item{ici}{Inter-click interval in ms, Note: -1 is for sessions with no lead click}
+#'   \item{bincond}{Binaural condition: 0 = Center, no ITD and no ILD, 1 = ILD-only, 2 = ITD-only, 3 = ITD+ILD}
+#'   \item{thmode}{Threshold estimate (mode of posterior distribution), i.e., LLR [dB] at 75 percent correct responses}
+#'   \item{X.0.95}{Lower 0.95 credibility interval of posterior distribution of threshold}
+#'   \item{X0.95.}{Upper 0.95 credibility interval of posterior distribution of threshold}
+#'   \item{mmode}{Mode of location parameter m}
+#'   \item{wmode}{Mode of scale parameter w (spread)}
+#'   \item{lapsemode}{Mode of lapse-reate parameter lambda}
+#'   \item{mineff}{MCMC diagnostic: lowest (worst) effective sample size over estimated parameters}
+#'   \item{maxrhat}{MCMC diagnostic: highest (worst) rhat (should be very close to 1.00)}
+#'   }
+"ths_det"
+
+#' Processed data from experiment ALEXIS 109: Additional experiment with roving
+#'
+#' This is processed data (estimated thresholds) from an experiment with five participants, tested on laterlization
+#' of a lag click following a lead click after
+#' 4 ms. The binaural difference of the lag click was either
+#' an ITD of 0.35 ms or an ILD of 10 dB. The level of the signals in each interval of teh task was either constant or 
+#' randomly roved +/-10 dB.
+#'
+#' @format A data frame with 20 rows and 11 columns.
+#' \describe{
+#'   \item{id}{Participant unique id number}
+#'   \item{ici}{Inter-click interval in ms, Note: -1 is for sessions with no lead click}
+#'   \item{bincond}{Binaural condition: 0 = Center, no ITD and no ILD, 1 = ILD-only, 2 = ITD-only, 3 = ITD+ILD}
+#'   \item{thmode}{Threshold estimate (mode of posterior distribution), i.e., LLR [dB] at 75 percent correct responses}
+#'   \item{X.0.95}{Lower 0.95 credibility interval of posterior distribution of threshold}
+#'   \item{X0.95.}{Upper 0.95 credibility interval of posterior distribution of threshold}
+#'   \item{mmode}{Mode of location parameter m}
+#'   \item{wmode}{Mode of scale parameter w (spread)}
+#'   \item{lapsemode}{Mode of lapse-reate parameter lambda}
+#'   \item{mineff}{MCMC diagnostic: lowest (worst) effective sample size over estimated parameters}
+#'   \item{maxrhat}{MCMC diagnostic: highest (worst) rhat (should be very close to 1.00)}
+#'   }
+"ths_rove"

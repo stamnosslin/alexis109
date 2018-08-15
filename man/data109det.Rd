@@ -26,7 +26,7 @@ data109det
 }
 \description{
 This is data from an experiment with three participants, tested on detection
-of a lag click following a lead click after an inter-click interval between 
+of a lag click following a lead click after an inter-click interval between
 0.125 to 256 ms. The binaural difference in the lag-click was an ITD of 0.35 ms
 an ILD of 10 dB or both or neither.
 }

@@ -28,9 +28,9 @@
 data109rov
 }
 \description{
-This is data from an experiment with five participants, tested on tested on 
-lateralization of a large binaural difference in lag clicks following a lead click 
-after an inter-click interval of 4 ms. The binaural difference was 
+This is data from an experiment with five participants, tested on tested on
+lateralization of a large binaural difference in lag clicks following a lead click
+after an inter-click interval of 4 ms. The binaural difference was
 an ITD of 0.35 ms or an ILD of 10 dB or both. The overall level of the first
 and second interval was randomly and independently roved +/- 10 dB in the roving
 condition
