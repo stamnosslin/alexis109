@@ -3,7 +3,7 @@ Auditory Modeling of lead-lag click pairs
 This folder contain files used for the auditory modeling described 
 in a manuscript submitted to journal. The stimuli were from the listening 
 experiment Alexis109, the psychophysical data of wich is available in the 
-R-library alexis109 
+R-library alexis109 (devtools::install_github("stamnosslin/alexis109"))
 
 Content:
 
