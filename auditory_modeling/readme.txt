@@ -1,4 +1,4 @@
-Auditory Modeling if lead-lag click pairs
+Auditory Modeling of lead-lag click pairs
 
 This folder contain files used for the auditory modeling described 
 in a manuscript submitted to journal. The stimuli were from the listening 
