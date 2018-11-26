@@ -31,7 +31,7 @@ if(savefig == 2) {
 ici <- 4  # Set this one!
 
 icis <- c(0.125, 0.25, 0.5, 1, 2, 4, 8, 16)  # These eight were analysed by Octave-AMT
-tau <- which(icis == ici)  # Ths one gest into the function 
+tau <- which(icis == ici)  # Ths one gets into the function 
 
 itdlegend <- "ITD-only, ICI = 4 ms"
 ildlegend <- "ILD-only, ICI = 4 ms"
