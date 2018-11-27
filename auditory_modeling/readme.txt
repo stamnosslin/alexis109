@@ -21,7 +21,7 @@ The output files are 3-dimensional arrays (ici x cf x output).
 
 ici = 8 matrices, one for each of these inter-click-intervals (ICI): 
       0.125, 0.25, 0.5, 1, 2, 4, 8, 16 ms
-cf = 31 rows: gammatone center-frequency
+cf = 30 rows: gammatone center-frequency (from 0.1 to 7.3 kHz)
 output = 5 columns: gammatone center-frequency, peak-crosscorr-unrestr, 
                     peak-cross-corr-restr, ild, centroid-crosscorr 
                     
@@ -35,5 +35,5 @@ To recreate the manuscript's Figure 4, run profile_plot_per_llr.R (set ici <- 4)
 
 
 ---
-MN 2018-11-26
+MN 2018-11-27
 
