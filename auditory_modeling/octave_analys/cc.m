@@ -44,12 +44,12 @@ for jj = 1:length(ici_cond)
  
  
   ## Frequncy range of auditory filters -----------------------------------------
-  flow = 80.0;                  
+  flow = 100.0;                  
   fhigh = 8000.0 ;     
   ## ---------------------------------------------------------------------------
   
   ## Gamma tone filtering and haf-wave rectifyng ------------------------------- 
-  fc = erbspacebw(flow,fhigh)';  % Equal ERB center freq spacing over range 
+  fc = erbspacebw(flow, fhigh, bw = 1, hitme = 100)';  % 1-erb spaced center frequencis
   
   # See http://amtoolbox.sourceforge.net/amt-0.9.9/doc/general/gammatone.php
   # for recommended setting with 'complex'

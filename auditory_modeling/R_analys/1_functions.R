@@ -140,7 +140,7 @@ profile_plot <- function(itd =  itd_lag0, ild = ild_lag0, cc = 4, mici = 6){
   # Add axis
   fc2 <- log2(0.001 * itd[, 1, mici])
   ylabels <- round(2^fc2, 2)
-  ylabels[seq(1,length(ylabels), by = 2)] <- ''
+  ylabels[seq(2,length(ylabels), by = 2)] <- ''
   axis(side = 2, pos = fc[1], las = 1, tck = 0.01, cex.axis = 0.4, 
        mgp = c(3, 0.2, 0), lwd = 0.5, las = 2)
   axis(side = 1, pos = ylim[1], at = fc, labels = ylabels, las = 2, tck = 0.01,
