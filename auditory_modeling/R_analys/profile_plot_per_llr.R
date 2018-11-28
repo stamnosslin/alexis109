@@ -52,6 +52,8 @@ pp <- matrix( c( 0/1, 1/2, 3/4,  1/1,  # row 1 left
 par(mar = c(1.2,2,0,0))
 ## -----------------------------------------------------------------------------
 
+ytext_itd <- expression(paste("Model output: Band-specific ", italic("itd"), " [ms]"))
+ytext_ild <- expression(paste("Model output: Band-specific ", italic("ild"), " [dB]"))
 
 ## LLR = +10 dB (row 1) --------------------------------------------------------
 itd <-  itd_lagp10
@@ -60,14 +62,15 @@ ild <-  ild_lagp10
 # Left
 par(fig = pp[1, ]) 
 profile_plot(itd = itd, ild = ild, cc = 4, mici = tau)
-mtext('Model output: Band-specific itd [ms]', 2, line = 0.5, cex = 0.6)
+#mtext('Model output: Band-specific itd [ms]', 2, line = 0.5, cex = 0.6)
+mtext(ytext_itd, 2, line = 0.5, cex = 0.6)
 text(4.5, 1.1, pos = 3, font = 3, labels = "LLR = +10 dB", cex = 0.4)
 addpc(llr = 10)
 
 # Right
 par(fig = pp[2, ], new = TRUE) 
 profile_plot(itd = itd, ild = ild, cc = 2, mici = tau)
-mtext('Model output: Band-specific ild [dB]', 2, line = 0.4, cex = 0.6)
+mtext(ytext_ild, 2, line = 0.4, cex = 0.6)
 
 # Legend
 lines(c(19.5, 21.5), c(11, 11), lty = 2, lwd = 0.4)
@@ -84,14 +87,14 @@ ild <-  ild_lag0
 # Left
 par(fig = pp[3, ], new = TRUE)
 profile_plot(itd = itd, ild = ild, cc = 4, mici = tau)
-mtext('Model output: Band-specific itd [ms]', 2, line = 0.5, cex = 0.6)
+mtext(ytext_itd, 2, line = 0.5, cex = 0.6)
 text(4.5, 1.1, pos = 3, font = 3, labels = "LLR = 0 dB", cex = 0.4)
 addpc(llr = 0)
 
 # Right
 par(fig = pp[4, ], new = TRUE)
 profile_plot(itd = itd, ild = ild, cc = 2, mici = tau)
-mtext('Model output: Band-specific ild [dB]', 2, line = 0.4, cex = 0.6)
+mtext(ytext_ild, 2, line = 0.4, cex = 0.6)
 ## -----------------------------------------------------------------------------
 
 
@@ -102,14 +105,14 @@ ild <-  ild_lagm10
 # Left
 par(fig = pp[5, ], new = TRUE) 
 profile_plot(itd = itd, ild = ild, cc = 4, mici = tau)
-mtext('Model output: Band-specific itd [ms]', 2, line = 0.5, cex = 0.6)
+mtext(ytext_itd, 2, line = 0.5, cex = 0.6)
 text(4.5, 1.1, pos = 3, font = 3, labels = "LLR = -10 dB", cex = 0.4)
 addpc(llr = -10)
 
 # Right
 par(fig = pp[6, ], new = TRUE) 
 profile_plot(itd = itd, ild = ild, cc = 2, mici = tau)
-mtext('Model output: Band-specific ild [dB]', 2, line = 0.4, cex = 0.6)
+mtext(ytext_ild, 2, line = 0.4, cex = 0.6)
 ## -----------------------------------------------------------------------------
 
 
@@ -120,7 +123,7 @@ ild <-  ild_lagm20
 # Left
 par(fig = pp[7, ], new = TRUE)
 profile_plot(itd = itd, ild = ild, cc = 4, mici = tau)
-mtext('Model output: Band-specific itd [ms]', 2, line = 0.5, cex = 0.6)
+mtext(ytext_itd, 2, line = 0.5, cex = 0.6)
 mtext('Gammatone-filter center-frequency [kHz]', 1, line = 0.2, cex = 0.6)
 text(4.5, 1.1, pos = 3, font = 3, labels = "LLR = -20 dB", cex = 0.4)
 addpc(llr = -20)
@@ -128,7 +131,7 @@ addpc(llr = -20)
 # Right
 par(fig = pp[8, ], new = TRUE)
 profile_plot(itd = itd, ild = ild, cc = 2, mici = tau)
-mtext('Model output: Band-specific ild [dB]', 2, line = 0.4, cex = 0.6)
+mtext(ytext_ild, 2, line = 0.4, cex = 0.6)
 mtext('Gammatone-filter center-frequency [kHz]', 1, line = 0.2, cex = 0.6)
 ## -----------------------------------------------------------------------------
 
