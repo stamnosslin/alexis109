@@ -7,9 +7,11 @@ R-library alexis109 (devtools::install_github("stamnosslin/alexis109"))
 
 Content:
 
-./octave_analys ----------------------------------------------------------------
+additional_modeling_figs.pdf --------------------------------------------------
+This is a file with additional figures created using code in the folder ./R_analys
 
-Modeling code (*.m) and output (*.txt). Octave code is based on functions in the 
+./octave_analys ----------------------------------------------------------------
+Folder with odeling code (*.m) and output (*.txt). Octave code is based on functions in the 
 Auditory Modeling Toolbox.
 
 The type fo analyzed stimulus is given by the name of the output files. 
@@ -27,10 +29,9 @@ output = 5 columns: gammatone center-frequency, peak-crosscorr-unrestr,
                     
                     
 ./R_analys ---------------------------------------------------------------------
-R code (*.R) for illustrating the model output (imports .txt data from /octave_analys), 
-and figures (*.pdf) for stimuli with various inter-click-intervals.
+Folder with R code (*.R) for illustrating the model output (imports .txt data from /octave_analys). 
 
-To recreate the manuscript's Figure 4, run profile_plot_per_llr.R (set ici <- 4)
+To recreate the manuscript's Figure 4, run profile_plot_per_llr.R
 
 
 

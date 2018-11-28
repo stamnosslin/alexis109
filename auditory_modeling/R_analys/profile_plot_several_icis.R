@@ -12,29 +12,38 @@ library(alexis109) # To obtain data on percent correct responses
 source("R_analys/0_get_octave_data.R")
 source("R_analys/1_functions.R")
 
+plotici <- function(ici) {
+# This function plots results for a specific ICI, in teh same way as 
+# the script profile_plot_per_llr.R plotted it for ICI = 4 ms (with the exception
+# that this function does not generat a table insert with performance data)
+  
+filename <- sprintf("ici%s", ici)  
+  
 ## Decide how to save figure ---------------------------------------------------
 savefig = 1  # 0 = dont save, show in Rstudio, 1 = pdf, 2 = png
 
 # Open pdf (paper = 'letter' or 'A4' to get fig on full page)
 if(savefig == 1) {
-  pdf("R_analys/ici4.pdf", width = 15/2.54, height = 23/2.54, paper = 'letter')
+  pdf(paste("R_analys/", filename, '.pdf', sep = ''), 
+      width = 15/2.54, height = 23/2.54, paper = 'letter')
 }
 
 # Open png 
 if(savefig == 2) {
-  png("R_analys/fig4.png", units = "in", res = 600, width = 15/2.54, height = 23/2.54)
+  png(paste("R_analys/", filename, '.png', sep = ''), 
+      units = "in", res = 600, width = 15/2.54, height = 23/2.54)
 }
 ## -----------------------------------------------------------------------------
 
 
 ## Define ICI to be analyzed ---------------------------------------------------
-ici <- 4  # Set this one!
+# ici <- 4  # Set this one!
 
 icis <- c(0.125, 0.25, 0.5, 1, 2, 4, 8, 16)  # These eight were analysed by Octave-AMT
 tau <- which(icis == ici)  # Ths one gets into the function 
 
-itdlegend <- "ITD-only, ICI = 4 ms"
-ildlegend <- "ILD-only, ICI = 4 ms"
+itdlegend <- sprintf("ITD-only, ICI = %s ms", ici)
+ildlegend <- sprintf("ILD-only, ICI = %s ms", ici)
 ## -----------------------------------------------------------------------------
 
 
@@ -65,7 +74,7 @@ profile_plot(itd = itd, ild = ild, cc = 4, mici = tau)
 #mtext('Model output: Band-specific itd [ms]', 2, line = 0.5, cex = 0.6)
 mtext(ytext_itd, 2, line = 0.5, cex = 0.6)
 text(4.5, 1.1, pos = 3, font = 3, labels = "LLR = +10 dB", cex = 0.4)
-addpc(llr = 10)
+#addpc(llr = 10)
 
 # Right
 par(fig = pp[2, ], new = TRUE) 
@@ -89,7 +98,7 @@ par(fig = pp[3, ], new = TRUE)
 profile_plot(itd = itd, ild = ild, cc = 4, mici = tau)
 mtext(ytext_itd, 2, line = 0.5, cex = 0.6)
 text(4.5, 1.1, pos = 3, font = 3, labels = "LLR = 0 dB", cex = 0.4)
-addpc(llr = 0)
+#addpc(llr = 0)
 
 # Right
 par(fig = pp[4, ], new = TRUE)
@@ -107,7 +116,7 @@ par(fig = pp[5, ], new = TRUE)
 profile_plot(itd = itd, ild = ild, cc = 4, mici = tau)
 mtext(ytext_itd, 2, line = 0.5, cex = 0.6)
 text(4.5, 1.1, pos = 3, font = 3, labels = "LLR = -10 dB", cex = 0.4)
-addpc(llr = -10)
+#addpc(llr = -10)
 
 # Right
 par(fig = pp[6, ], new = TRUE) 
@@ -126,7 +135,7 @@ profile_plot(itd = itd, ild = ild, cc = 4, mici = tau)
 mtext(ytext_itd, 2, line = 0.5, cex = 0.6)
 mtext('Gammatone-filter center-frequency [kHz]', 1, line = 0.2, cex = 0.6)
 text(4.5, 1.1, pos = 3, font = 3, labels = "LLR = -20 dB", cex = 0.4)
-addpc(llr = -20)
+#addpc(llr = -20)
 
 # Right
 par(fig = pp[8, ], new = TRUE)
@@ -141,3 +150,11 @@ if(savefig > 0){
   graphics.off() 
 }
 # ------------------------------------------------------------------------------
+
+}
+
+
+## Plot for several icis ------------------------------------------------------
+to_be_ploted <- c(0.125, 0.25, 0.5, 1, 2, 4, 8)
+sapply(to_be_ploted , plotici)
+## -----------------------------------------------------------------------------
