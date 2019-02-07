@@ -1,5 +1,5 @@
 # alexis109
-This R library contains data from an experiment (called alexis109) on lateralization and detection of lag-clicks in lead-lag click pairs. This is data described in Nilsson, M.E., Tirado, C., and Szychowska, M. (2019). Psychoacoustic evidence for stronger discrimination suppression of spatial information conveyed by lag-click interaural time than interaural level differences. Accepted for publication in *The Journal of the Acoustical Society of America*.
+This R library contains data from an experiment (called alexis109) on lateralization and detection of lag-clicks in lead-lag click pairs. This is data described in Nilsson, M.E., Tirado, C., and Szychowska, M. (2019). Psychoacoustic evidence for stronger discrimination suppression of spatial information conveyed by lag-click interaural time than interaural level differences. *The Journal of the Acoustical Society of America*, 145, 512-524. https://doi.org/10.1121/1.5087707
 
 To install the data as an R-package, first install the **devtools** library, then:  
 
